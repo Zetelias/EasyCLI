@@ -3,7 +3,7 @@
  * @author Elias Bort (zetelias@proton.me)
  * @brief A simple header-only library to make it easy to create a CLI by exposing a simple API with 2 structs and 1 class.
  * @remark This is a header-only library, so you don't need to compile anything. Just include this header file in your project and you're good to go!
- * @version 0.1
+ * @version 0.2
  * @date 2023-12-29
  *
  * @copyright GPLv3
@@ -13,9 +13,9 @@
 #pragma once
 #include <functional>
 #include <iostream>
-#include <map>
 #include <sstream>
 #include <string>
+#include <unordered_map>
 #include <vector>
 #define BINDFN(fn) static_cast<CommandOutput (*)(const CommandArguments &)>(fn)
 #define COMMAND_FUNCTION(name) CommandOutput name(const CommandArguments &args)
@@ -81,7 +81,7 @@ inline CommandArguments ParseArgs(const std::string &input) {
 }
 
 using CommandFunction = std::function<CommandOutput(const CommandArguments &)>;
-using CommandMap = std::map<std::string, CommandFunction>;
+using CommandMap = std::unordered_map<std::string, CommandFunction>;
 
 /**
  * @brief  A class that makes it easy to create a CLI
