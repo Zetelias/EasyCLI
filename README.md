@@ -57,6 +57,12 @@ int main(int argc, char **argv) {
 ```
 > Note: this is not the only way of using EasyCLI, but it's enough in most cases
 
+## Documentation
+The documentation as a pdf is available for each release in the "release" tab.
+If it's not enough then ask me questions on my discord (it is "zetelias")
+
+> Note: If you're on linux and have everything needed to generate a .pdf from a Doxyfile, use the `generate_pdf.py` script.
+
 ## Testing
 This uses google test and CTest for testing. Tests are written in test.cpp. If you want to contribute code make sure to do tests for it. Right now the tests don't cover as much as i'd want it to cover so more would be appreciated.
 
@@ -66,5 +72,5 @@ I'd be happy to merge your pull requests or even take new maintainers! Just make
 ## TODO's
 With no particular order:
 - As i've said more tests would be appreciated
-- Switch from `map` to `unordered_map` as the underlying data type of the EasyCLI class commands property
 - Polish the documentation
+
