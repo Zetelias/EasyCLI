@@ -57,8 +57,14 @@ int main(int argc, char **argv) {
 ```
 > Note: this is not the only way of using EasyCLI, but it's enough in most cases
 
-## Documentation
-The documentation as a pdf is available [here](https://cdn.discordapp.com/attachments/1180670034121592954/1190138435390935040/EasyCLIDocumentation.pdf?ex=65a0b5ca&is=658e40ca&hm=8e25b6a373cba6a93109c8c7b2e930f7e8742b6b6be9b5d5c49def8cb84fdd94&). If it's not enough then ask me questions on my discord (it is "zetelias")
+## Testing
+This uses google test and CTest for testing. Tests are written in test.cpp. If you want to contribute code make sure to do tests for it. Right now the tests don't cover as much as i'd want it to cover so more would be appreciated.
 
 ## Contributing
 I'd be happy to merge your pull requests or even take new maintainers! Just make sure your code compiles and doesn't break the guideline of simplicity and usability.
+
+## TODO's
+With no particular order:
+- As i've said more tests would be appreciated
+- Switch from `map` to `unordered_map` as the underlying data type of the EasyCLI class commands property
+- Polish the documentation

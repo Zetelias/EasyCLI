@@ -13,9 +13,9 @@
 #pragma once
 #include <functional>
 #include <iostream>
-#include <map>
 #include <sstream>
 #include <string>
+#include <unordered_map>
 #include <vector>
 #define BINDFN(fn) static_cast<CommandOutput (*)(const CommandArguments &)>(fn)
 #define COMMAND_FUNCTION(name) CommandOutput name(const CommandArguments &args)
@@ -81,7 +81,7 @@ inline CommandArguments ParseArgs(const std::string &input) {
 }
 
 using CommandFunction = std::function<CommandOutput(const CommandArguments &)>;
-using CommandMap = std::map<std::string, CommandFunction>;
+using CommandMap = std::unordered_map<std::string, CommandFunction>;
 
 /**
  * @brief  A class that makes it easy to create a CLI
