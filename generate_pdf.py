@@ -1,4 +1,4 @@
-# This whol file assumes you're on Linux and have everything necessary installed
+# This whole file assumes you're on Linux and have everything necessary installed
 # to generate a pdf from a Doxyfile. If you're on Windows, like me, use WSL.
 
 import os
