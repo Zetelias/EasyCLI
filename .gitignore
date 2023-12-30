@@ -15,3 +15,4 @@ _deps
 .idea
 .vscode
 .vs
+*.pdf

@@ -40,6 +40,32 @@ struct CommandArguments {
     std::string command;
     std::vector<std::string> arguments;
     std::vector<std::string> flags;
+
+    /**
+     * @brief Returns true if the flags vector contains the specified flag
+     *
+     * @param flag The flag to check for
+     * @return true if the flags vector contains the specified flag
+     * @return false if the flags vector does not contain the specified flag
+     * @remark This is a convenience function that is equivalent to `std::find(arguments.begin(), arguments.end(), argument) != arguments.end();`
+     * @remark The time complexity of this function is O(n), where n is the number of flags
+     */
+    bool flags_contains(const std::string &flag) const {
+        return std::find(flags.begin(), flags.end(), flag) != flags.end();
+    }
+
+    /**
+     * @brief Returns true if the arguments vector contains the specified flag
+     *
+     * @param flag The flag to check for
+     * @return true if the arguments vector contains the specified flag
+     * @return false if the arguments vector does not contain the specified flag
+     * @remark This is a convenience function that is equivalent to `std::find(arguments.begin(), arguments.end(), argument) != arguments.end();`
+     * @remark The time complexity of this function is O(n), where n is the number of arguments
+     */
+    bool arguments_contains(const std::string &argument) const {
+        return std::find(arguments.begin(), arguments.end(), argument) != arguments.end();
+    }
 };
 
 /**

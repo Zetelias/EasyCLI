@@ -71,6 +71,8 @@ I'd be happy to merge your pull requests or even take new maintainers! Just make
 
 ## TODO's
 With no particular order:
+- Change the parser and data types to allow flags and arguments to carry data, like if the command was `my_command bits=64` then `args.arguments["bits"] == "64"`
 - As i've said more tests would be appreciated
 - Polish the documentation
+- Make function names clearer
 
