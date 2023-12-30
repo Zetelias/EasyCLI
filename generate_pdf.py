@@ -18,9 +18,10 @@ with open("Doxyfile", "r") as f:
         # It is the line that contains the version number, such as PROJECT_NUMBER = "0.2.1"
         if "PROJECT_NUMBER" in line and "=" in line:
             # Gets the right side of the equal sign, strips it of whitespace, quotes, and replaces . with -
-            version = line.split("=")[1].strip().replace("\"", "").replace(".", "-")
-            # Get out of the loop early because we don't need to read the lines anymore
-            # Truly a revolutionary optimization idea for python developers
+            version = line.split("=")[1].strip().replace('"', "").replace(".", "-")
+            # Get out of the loop early because we don't need to read the lines anymore.
+            # Truly an unthinkable revolutionary optimization idea for python standards.
+            # I expect my nobel prize in the mail.
             break
 
 
@@ -28,7 +29,7 @@ with open("Doxyfile", "r") as f:
 subprocess.run(["doxygen", "Doxyfile"])
 
 # Change the dir from the root to the dir in which the latex files are
-os.chdir("latex") 
+os.chdir("latex")
 
 # Run make pdf to generate the pdf
 subprocess.run(["make", "pdf"])
