@@ -9,6 +9,7 @@ version = ""
 with open("Doxyfile", "r") as f:
     for line in f:
         if "PROJECT_NUMBER" in line and "=" in line:
+            # Lots of words to essentially get the version number
             version = line.split("=")[1].strip().replace("\"", "").replace(".", "-")
             break
 
