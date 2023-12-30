@@ -50,7 +50,10 @@ int main(int argc, char **argv) {
     // 2. Register commands
     cli.RegisterCommand("multiply", multiply);
 
-    // 3. RUN!
+    // 3. RUN! This parses a command from argv and then tries to execute it.
+    //    If your functions produce errors or the command the user is calling doesn't exist,
+    //    it will output to std::cerr.
+    //    Else if everything goes well, it will output a message to std::cout.
     cli.Run(argv);
 }
 

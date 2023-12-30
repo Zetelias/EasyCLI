@@ -1,7 +1,5 @@
 #include "EasyCLI.hpp"
-#include <cstddef>
 #include <gtest/gtest.h>
-#include <unordered_set>
 
 COMMAND_FUNCTION(multiply) {
     CommandOutput out;
@@ -86,7 +84,7 @@ COMMAND_FUNCTION(flag) {
 TEST(EasyCliTest, FlagTest) {
     EasyCLI cli;
     cli.RegisterCommand("flag", flag);
-    CommandOutput out = cli.Execute("flag --flag");
+    CommandOutput out = cli.Execute("flag -flag");
     EXPECT_EQ(out.out, "Flag is set");
     EXPECT_TRUE(out.success);
 }
