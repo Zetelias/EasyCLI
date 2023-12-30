@@ -3,7 +3,7 @@
  * @author Elias Bort (zetelias@proton.me)
  * @brief A simple header-only library to make it easy to create a CLI by exposing a simple API with 2 structs and 1 class.
  * @remark This is a header-only library, so you don't need to compile anything. Just include this header file in your project and you're good to go!
- * @version 0.2
+ * @version 0.2.1
  * @date 2023-12-29
  *
  * @copyright GPLv3
